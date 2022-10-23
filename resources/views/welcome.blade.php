@@ -176,7 +176,7 @@
                 <hr class="my-6 border-blueGray-200">
                 <div class="flex flex-wrap items-center md:justify-between justify-center">
                     <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-                        <div class="text-sm text-blueGray-500 py-1">Copyright © 2022 Mojabora by
+                        <div class="text-sm text-blueGray-500 py-1">Copyright © 2022 <a href="https://mojabora.com">Mojabora</a>  by
                             Creative Time.</div>
                     </div>
                 </div>
