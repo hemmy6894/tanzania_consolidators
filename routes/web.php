@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CompanyController;
+use App\Models\CompanyModel;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +16,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $companies = CompanyModel::paginate(6);
+    return view('welcome', compact("companies"));
 });
 
-Route::get('/company/{company}', function () {
+Route::get('/view/{company}', function () {
     return view('company');
 })->name("company");
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        $companies = CompanyModel::get();
+        return view('dashboard' , compact("companies"));
+    })->name('dashboard');
+    Route::resource("company",CompanyController::class);
+});

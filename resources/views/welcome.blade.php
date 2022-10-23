@@ -23,7 +23,7 @@
                 <div class="flex justify-center items-center h-full">
                     <div class="text-center text-white px-6 md:px-12">
                         <h1 class="text-5xl font-bold mt-0 mb-6">Tanzania Consolidators</h1>
-                        <h3 class="text-3xl font-bold mb-8">List of all tanzania Consolidators</h3>
+                        {{-- <h3 class="text-3xl font-bold mb-8">Tanzania Consolidators</h3> --}}
                         {{-- <button type="button"
                             class="inline-block px-6 py-2.5 border-2 border-white text-white font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
                             data-mdb-ripple="true" data-mdb-ripple-color="light">
@@ -42,12 +42,12 @@
                     <div class="mb-12 flex flex-wrap -mx-4 justify-center">
                         <div class="px-4 relative w-full lg:w-8/12 text-center">
                             <h6 class="mb-2 text-lg font-bold uppercase text-teal-500">Have you seen us?</h6>
-                            <h2 class="text-4xl font-bold mt-0 mb-1 text-white">Some of Tanzania Consolidator Company
+                            <h2 class="text-4xl font-bold mt-0 mb-1 text-white">Some of Tanzania Consolidators
                             </h2>
                         </div>
                     </div>
                 </div>
-                <div class="mb-10">
+                {{-- <div class="mb-10">
                     <form>
                         <label for="default-search"
                             class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
@@ -66,46 +66,17 @@
                                 class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
                         </div>
                     </form>
-                </div>
+                </div> --}}
                 <div class="flex flex-wrap -mx-4">
-                    @foreach ([1, 2, 3, 4, 5, 6, 7, 8, 9] as $item)
-                        <x-company.card />
+                    @foreach ($companies as $item)
+                        <x-company.card :company="$item"/>
                     @endforeach
                 </div>
 
                 <div class="mt-5">
 
                     <nav aria-label="Page navigation example">
-                        <ul class="inline-flex -space-x-px">
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
-                            </li>
-                            <li>
-                                <a href="#" aria-current="page"
-                                    class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
-                            </li>
-                        </ul>
+                        {{ $companies->appends($_GET)->links() }}
                     </nav>
 
                 </div>
