@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
             $table->string("name");
+            $table->string("slag");
             $table->string("country")->default("Tanzania");
             $table->string("industry")->default("Consolidator");
             $table->string("contact_phone")->nullable();

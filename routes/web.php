@@ -20,8 +20,9 @@ Route::get('/', function () {
     return view('welcome', compact("companies"));
 });
 
-Route::get('/view/{company}', function () {
-    return view('company');
+Route::get('/view/{company}', function ($company) {
+    $company = CompanyModel::where("slag",$company)->first() ?? abort(404);
+    return view('company', compact("company"));
 })->name("company");
 
 Route::middleware([

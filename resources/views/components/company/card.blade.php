@@ -10,7 +10,7 @@
             <p class="text-blueGray-500 leading-relaxed">{{ $company->short_description }}</p>
             <div
                 class="grid grid-cols-2 text-blueGray-500 border-blueGray-200 opacity-0 rounded-b px-4 py-4 border-t absolute bottom-0 left-0 w-full text-center flex items-center justify-center transition-all duration-300 ease-in-out transform translate-y-1/2 group-hover:translate-y-0 group-hover:opacity-100">
-                <div><a href="{{ route('company', ['company' => $company->id]) }}">Read more</a></div>
+                <div><a href="{{ route('company', ['company' => $company->slag]) }}">Read more</a></div>
                 @if ($company->website)
                     <div><a href="{{ $company->website }}" target="_blank">Go To Site</a></div>
                 @endif
