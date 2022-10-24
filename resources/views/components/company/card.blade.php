@@ -6,7 +6,7 @@
             <img src="{{ $company->logo_url }}" alt="" srcset="" class="w-16 h-16 rounded-full">
         </div>
         <div class="pt-8 pb-16 px-10 flex-auto relative overflow-hidden">
-            <h4 class="text-2xl font-bold mt-0 mb-2">{{ $company->name }}</h4>
+            <h4 class="text-2xl font-bold mt-0 mb-2" nowrap>{{ $company->name }}</h4>
             <p class="text-blueGray-500 leading-relaxed">{{ substr($company->short_description, 0, 156) }} ...</p>
             <div
                 class="grid grid-cols-2 text-blueGray-500 border-blueGray-200 opacity-50 rounded-b px-4 py-4 border-t absolute bottom-0 left-0 w-full text-center flex items-center justify-center transition-all duration-300 ease-in-out transform translate-y-0 group-hover:translate-y-0 group-hover:opacity-100">
