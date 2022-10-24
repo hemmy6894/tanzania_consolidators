@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string("website")->nullable();
             $table->string("logo")->nullable();
             $table->mediumText("address");
-            $table->mediumText("short_decription");
+            $table->mediumText("short_description");
             $table->timestamps();
         });
     }

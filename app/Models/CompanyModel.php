@@ -9,7 +9,7 @@ class CompanyModel extends Model
 {
     use HasFactory;
     protected $table = "companies";
-    protected $fillable = ["name","industry","contact_phone","contact_email","website","logo","address","short_decription","country"];
+    protected $fillable = ["name","industry","contact_phone","contact_email","website","logo","address","short_description","country"];
     public function getLogoUrlAttribute(){
         return asset($this->logo);
     }
