@@ -11,7 +11,7 @@
                 <form action="{{ route('company.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="grid grid-cols-2 gap-4 p-3">
-                        <div><input type="text" name="Name" placeholder="Name" class="border p-2 w-full"></div>
+                        <div><input type="text" name="name" placeholder="Name" class="border p-2 w-full"></div>
                         <div><input type="text" name="industry" placeholder="industry" class="border p-2 w-full"></div>
                     </div>
                     <div class="grid grid-cols-2 gap-4 p-3">
