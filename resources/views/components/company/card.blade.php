@@ -9,7 +9,7 @@
             <h4 class="text-2xl font-bold mt-0 mb-2">{{ $company->name }}</h4>
             <p class="text-blueGray-500 leading-relaxed">{{ $company->short_description }}</p>
             <div
-                class="grid grid-cols-2 text-blueGray-500 border-blueGray-200 opacity-50 rounded-b px-4 py-4 border-t absolute bottom-0 left-0 w-full text-center flex items-center justify-center transition-all duration-300 ease-in-out transform translate-y-1/2 group-hover:translate-y-0 group-hover:opacity-100">
+                class="grid grid-cols-2 text-blueGray-500 border-blueGray-200 opacity-50 rounded-b px-4 py-4 border-t absolute bottom-0 left-0 w-full text-center flex items-center justify-center transition-all duration-300 ease-in-out transform translate-y-0 group-hover:translate-y-0 group-hover:opacity-100">
                 <div><a href="{{ route('company', ['company' => $company->slag]) }}">Read more</a></div>
                 @if ($company->website)
                     <div><a href="{{ $company->website }}" target="_blank">Go To Site</a></div>
