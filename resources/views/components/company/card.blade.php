@@ -1,4 +1,4 @@
-<div class="px-4 mb-12 relative w-full md:w-4/12">
+<div class="px-4 mb-12 relative w-full md:w-4/12 flex-1">
     <div
         class="shadow-lg rounded-lg relative flex flex-col min-w-0 break-words bg-white w-full mb-6 group transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:z-2">
         <div
