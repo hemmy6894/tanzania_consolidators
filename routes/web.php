@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $companies = CompanyModel::paginate(1);
+    $companies = CompanyModel::paginate(6);
     return view('welcome', compact("companies"));
 });
 
