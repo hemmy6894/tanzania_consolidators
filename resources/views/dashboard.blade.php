@@ -16,7 +16,7 @@
                     <div><a href="{{ route('company.create') }}" class="btn btn-blue">Create</a></div>
                 </div>
             </div>
-            <div class="flex flex-wrap -mx-4">
+            <div class="flex flex-wrap -mx-4 mt-10">
                 @foreach ($companies as $item)
                     <x-company.card :company="$item"/>
                 @endforeach

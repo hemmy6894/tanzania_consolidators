@@ -74,11 +74,9 @@
                 </div>
 
                 <div class="mt-5">
-
                     <nav aria-label="Page navigation example">
                         {{ $companies->appends($_GET)->links() }}
                     </nav>
-
                 </div>
             </div>
         </div>
